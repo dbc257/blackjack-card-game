@@ -5,8 +5,8 @@
     <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/iconza-poker-playing-cards/64/clubs-A-512.png">
     <meta charset="utf-8">
     <title>Blackjack</title>
-    <!-- <script src="./js/jquery.js" defer></script>
-    <script src="./js/blackjack.js" defer></script> -->
+    <!-- <script src="./js/jquery.js" defer></script> -->
+    <script src="./js/blackjack.js" defer></script>
     <script src="./js/main.js" defer></script>
     <link rel="stylesheet" href="./css/blackjack.css">
     <link rel="stylesheet" href="./css/animate.css">
@@ -17,12 +17,14 @@
       <div id="topPadding">
       </div>
       <div id="padding">
-        <label>Dealer's Hand</label>
+        <label>Dealer:</label>
+        <span id="dealer-points" class="points"></span>
       </div>
       <div id="dealerHand" class="hand">
       </div>
       <div id="padding">
-        <label>Your Hand</label>
+        <label>Player:</label>
+        <span id="player-points" class="points"></span>
       </div>
       <div id="playerHand" class="hand">
       </div>
@@ -58,7 +60,7 @@
       </div>
       <div id="padding2">
       </div>
-      <!-- <div id="messages" class="animated infinite flash"></div> -->
+      <div id="messages" class="animated infinite flash"></div>
       <div class="message-box" id="messages"></div>
     </div>
     <div id="logo">
