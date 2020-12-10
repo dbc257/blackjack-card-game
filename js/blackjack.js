@@ -369,20 +369,5 @@ window.addEventListener("DOMContentLoaded", function () {
         }, 1000);
         }, 1008);
       } 
-      if (
-        dealerPoints > 21 &&
-        playerPoints < 21 
-        // &&
-        // playerPoints < dealerPoints
-      ) {
-        // console.log(`Player has ${playerPoints}, dealer has ${dealerPoints}`);
-        setTimeout(function () {
-          alert("You win! The Dealer bust by going over 21 points!");
-                  setTimeout(function () {
-        location.reload();
-        }, 1000);
-        }, 1008);
-      }
-      
     });
 });
