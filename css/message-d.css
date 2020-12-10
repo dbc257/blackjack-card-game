@@ -315,12 +315,15 @@
 
   .buttons {
     display: flex;
-    flex-direction: column;
+    margin: 10px;
+    /* flex-direction: column; */
     justify-content: center;
+    /* width: max-content */
   }
 
   button {
     margin: 10px;
+    /* margin-top: 10px; */
     font-size: 18px;
     border: 0;
     padding: 10px 16px;
