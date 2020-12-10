@@ -284,7 +284,7 @@
     background: rgb(22, 77, 8);
     margin: 0 auto;
     color: white;
-    padding: 30px;
+    /* padding: 30px; */
     height: 85%;
   }
   .player {
@@ -308,7 +308,7 @@
   }
 
   .hand img {
-    height: 50%;
+    height: 99%;
     width: auto;
     padding: 10px 0 10px 10px;
   }
@@ -360,7 +360,8 @@
   }
   #dealerHand {
     width: 99%;
-    height: 150px;
+    height: 80px;
+    /* height: 90%; */
     border: 2px solid white;
     border-radius: 10px;
     margin: auto;
@@ -369,7 +370,7 @@
 
   #playerHand {
     width: 99%;
-    height: 150px;
+    height: 80px;
     border: 2px solid white;
     border-radius: 10px;
     margin: auto;
