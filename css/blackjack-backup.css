@@ -1,0 +1,313 @@
+body {
+  background: url(wood_pattern.png);
+}
+
+#table {
+  background: rgba(57, 130, 53, 1); /* Old browsers */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(201, 222, 150, 1) 0%,
+    rgba(138, 182, 107, 1) 0%,
+    rgba(57, 130, 53, 1) 90%
+  ); /* FF3.6-15 */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(201, 222, 150, 1) 0%,
+    rgba(138, 182, 107, 1) 0%,
+    rgba(57, 130, 53, 1) 90%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(201, 222, 150, 1) 0%,
+    rgba(138, 182, 107, 1) 0%,
+    rgba(57, 130, 53, 1) 90%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  border: sienna solid 30px;
+  border-radius: 100px;
+  height: 600px;
+  text-align: center;
+  width: auto;
+  margin: auto;
+  box-shadow: 5px 5px 5px black, inset 0 0 10px black;
+  -moz-box-shadow: 5px 5px 5px black, inset 0 0 10px black;
+  -webkit-box-shadow: 5px 5px 5px black, inset 0 0 10px black;
+}
+
+#logo {
+  font-family: "Cinzel", serif;
+  -webkit-transform: rotate(90deg);
+  opacity: 0.5;
+  color: white;
+  font-size: 2em;
+  float: left;
+  margin-top: -385px;
+  margin-left: -100px;
+  text-shadow: 0.25px 0.25px 0.25px black;
+}
+
+#logo2 {
+  font-family: "Cinzel", serif;
+  -webkit-transform: rotate(270deg);
+  opacity: 0.5;
+  color: white;
+  font-size: 2em;
+  float: right;
+  margin-top: -385px;
+  margin-right: -100px;
+  text-shadow: 0.25px 0.25px 0.25px black;
+}
+
+#padding {
+  width: 600px;
+  height: 50px;
+  text-align: center;
+  margin: auto;
+  font-family: "Trebuchet MS";
+  text-shadow: 1px 1px 1px black;
+}
+
+#padding2 {
+  width: 600px;
+  height: 15px;
+  text-align: center;
+  margin: auto;
+  font-family: "Trebuchet MS";
+  text-shadow: 1px 1px 1px black;
+}
+
+.moneyPadding {
+}
+
+#buttonPadding {
+  width: 600px;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+#dealerHand {
+  width: 700px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+#playerHand {
+  width: 700px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+label {
+  opacity: 0.9;
+  color: white;
+  font-size: 2.1em;
+  text-align: center;
+  margin: auto;
+  width: auto;
+}
+
+#dealButton {
+  box-shadow: rgb(62, 115, 39) 0px 10px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: rgb(91, 138, 60) 0px 1px 0px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(76, 112, 58) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 4px 4px 2px black;
+  margin-right: 8px;
+}
+
+#dealButton:hover {
+  box-shadow: rgb(59, 117, 33) 0px 13px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: rgb(91, 138, 60) 0px 1px 0px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(3, 3, 3) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 4px 4px 2px black;
+}
+
+#dealButton:active {
+  box-shadow: rgb(59, 117, 33) 0px 13px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: white 1px 1px 1px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(3, 3, 3) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 2px 2px 1px black;
+}
+
+#hitButton {
+  box-shadow: rgb(62, 115, 39) 0px 10px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: rgb(91, 138, 60) 0px 1px 0px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(76, 112, 58) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 4px 4px 2px black;
+  margin-right: 8px;
+}
+
+#hitButton:hover {
+  box-shadow: rgb(59, 117, 33) 0px 13px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: rgb(91, 138, 60) 0px 1px 0px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(3, 3, 3) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 4px 4px 2px black;
+}
+
+#hitButton:active {
+  box-shadow: rgb(59, 117, 33) 0px 13px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: white 1px 1px 1px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(3, 3, 3) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 2px 2px 1px black;
+}
+
+#standButton {
+  box-shadow: rgb(62, 115, 39) 0px 10px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: rgb(91, 138, 60) 0px 1px 0px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(76, 112, 58) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 4px 4px 2px black;
+}
+
+#standButton:hover {
+  box-shadow: rgb(59, 117, 33) 0px 13px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: rgb(91, 138, 60) 0px 1px 0px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(3, 3, 3) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 4px 4px 2px black;
+}
+
+#standButton:active {
+  box-shadow: rgb(59, 117, 33) 0px 13px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: "Trebuchet MS";
+  font-size: 21px;
+  font-weight: bold;
+  padding: 12px 45px;
+  text-decoration: none;
+  text-shadow: white 1px 1px 1px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(3, 3, 3) 100%)
+    rgb(119, 181, 90);
+  box-shadow: 2px 2px 1px black;
+}
+
+img {
+  float: left;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 100px;
+  height: 125px;
+  margin: 10px 5px 10px 5px;
+  box-shadow: 2.5px 2.5px 2px black;
+}
+
+a {
+  text-decoration: none;
+  opacity: 0.5;
+  color: white;
+}
+
+#messages {
+  font-size: 2em;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  font-family: "Trebuchet MS";
+}
+
+#money {
+  font-family: "Trebuchet MS";
+  width: 150px;
+  color: white;
+  margin: auto;
+  border: 1px solid white;
+  text-shadow: 0.5px 0.5px 0.5px black;
+}
