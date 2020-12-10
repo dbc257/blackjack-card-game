@@ -131,7 +131,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     border: sienna solid 30px;
     border-radius: 100px;
-    height: 85%
+    height: 85%;
     text-align: center;
     width: auto;
     /* margin: auto; */
@@ -285,7 +285,7 @@
     margin: 0 auto;
     color: white;
     padding: 30px;
-    height: 85%
+    height: 85%;
   }
   .player {
     margin: 20px;
