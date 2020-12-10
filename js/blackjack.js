@@ -321,6 +321,7 @@ window.addEventListener("DOMContentLoaded", function () {
       if (
         // playerPoints > 21 &&
         dealerPoints < 21 &&
+        playerPoints < 21 &&
         dealerPoints > playerPoints
       ) {
         // console.log(`Player has ${playerPoints}, dealer has ${dealerPoints}`);
