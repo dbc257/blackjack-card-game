@@ -319,6 +319,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }, 1008);
       }
       if (
+        dealerPoints > 16 &&
         dealerPoints === playerPoints
         ) {
         setTimeout(function () {
