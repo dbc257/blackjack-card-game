@@ -261,7 +261,7 @@ window.addEventListener("DOMContentLoaded", function () {
         );
       dealerTurn = true;
       DealerCalc();
-      while (dealerPoints < 18 && dealerPoints < playerPoints) {
+      while (dealerPoints < 18 && dealerPoints < playerPoints || dealerPoints < 18 && dealerPoints === playerPoints) {
         // if (dealerPoints < 18) {
           // if (dealerPoints < 18 && dealerPoints < playerPoints) {
           //   setTimeout(function () {
