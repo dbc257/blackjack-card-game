@@ -103,7 +103,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let hiddenCard = document.createElement("img");
     hiddenCard.setAttribute("src", `images/back_of_card.png`);
     hiddenCard.setAttribute("id", "hidden");
-    console.log(dealerHand);
+    // console.log(dealerHand);
     document.getElementById("dealerHand").appendChild(hiddenCard);
   }
 
@@ -116,6 +116,19 @@ window.addEventListener("DOMContentLoaded", function () {
     dealerCard.setAttribute("src", `images/${randomDealerCard.value}_of_${randomDealerCard.suit}.png`);
     document.getElementById("dealerHand").appendChild(dealerCard);
     return dealerHand;
+  }
+
+  function DealDealerHiddenCard() {
+    // let max = deck.length;
+    // let randomDealerCard = deck.splice(Math.floor(Math.random() * max), 1)[0];
+    // dealerHand.push(randomDealerCard)
+    // deck.unshift(randomDealerCard);
+    // let dealerCard = document.createElement("img");
+    // hiddenCard.setAttribute("id", "hidden");
+    document.getElementById("hidden").setAttribute("src", `images/${dealerHand[1].value}_of_${dealerHand[1].suit}.png`);
+    // dealerCard.setAttribute("src", `images/${randomDealerCard.value}_of_${randomDealerCard.suit}.png`);
+    // document.getElementById("dealerHand").appendChild(dealerCard);
+    // return dealerHand;
   }
 
   function DealAgain() {
@@ -251,17 +264,17 @@ window.addEventListener("DOMContentLoaded", function () {
       }, 1008);
     } 
   });
-  document
-    .getElementById("standButton")
-    .addEventListener("click", function () {
-      document
-        .getElementById("hidden")
-        .setAttribute(
-          "src",
-          `images/${dealerHand[1].value}_of_${dealerHand[1].suit}.png`
-        );
+  document.getElementById("standButton").addEventListener("click", function () {
+      // document
+      //   .getElementById("hidden")
+      //   .setAttribute(
+      //     "src",
+      //     `images/${dealerHand[1].value}_of_${dealerHand[1].suit}.png`
+      //   );
       dealerTurn = true;
+      DealDealerHiddenCard()
       DealerCalc();
+      // setTimeout(function (){
       while (dealerPoints < 18 && dealerPoints < playerPoints || dealerPoints < 18 && dealerPoints === playerPoints) {
         // if (dealerPoints < 18) {
           // if (dealerPoints < 18 && dealerPoints < playerPoints) {
@@ -273,9 +286,10 @@ window.addEventListener("DOMContentLoaded", function () {
         //     DealAgain()
         //   }, 750);
         // }
-        setTimeout(DealAgain(), 1000);
-      // DealAgain();
-    } 
+        // setTimeout(DealAgain(), 1000);
+      DealAgain();
+    }
+    // , 1000}); 
     // else if (dealerPoints < 18 && dealerPoints < playerPoints) {
     //   DealAgain();
     // } else 
