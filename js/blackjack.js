@@ -117,6 +117,7 @@ window.addEventListener("DOMContentLoaded", function () {
     document.getElementById("dealerHand").appendChild(dealerCard);
     return dealerHand;
   }
+
   function DealAgain() {
     DealDealerCard();
     DealerCalc();
@@ -272,7 +273,8 @@ window.addEventListener("DOMContentLoaded", function () {
         //     DealAgain()
         //   }, 750);
         // }
-      DealAgain();
+        setTimeout(DealAgain(), 1000);
+      // DealAgain();
     } 
     // else if (dealerPoints < 18 && dealerPoints < playerPoints) {
     //   DealAgain();
