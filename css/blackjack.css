@@ -11,29 +11,58 @@
     box-sizing: inherit;
   }
 
-  .message-box {
-    width: 900px;
-    max-width: calc(100% - 20px);
-    margin: 0 auto 10px;
-    height: 1em;
+  label {
+    opacity: 0.9;
+    color: white;
+    font-size: 2.1em;
+    text-align: center;
+    margin: auto;
+    width: auto;
+  }
+
+  a {
+    text-decoration: none;
+    opacity: 0.5;
+    color: white;
+  }
+
+  button {
+    margin: 10px;
     font-size: 18px;
-    color: rgb(22, 77, 8);
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: rgb(189, 229, 255);
+    background: rgb(0, 98, 163);
   }
 
-  .message-box.error {
-    color: rgb(122, 0, 0);
+  button:hover {
+    cursor: pointer;
+    background: rgb(35, 133, 199);
+    box-shadow: 0px 0px 10px 5px rgba(35, 133, 199, 0.55);
   }
 
-  /* .table {
-    width: 90%;
-    max-width: calc(100% - 20px);
-    border: 8px solid rgb(10, 43, 2);
+  .table {
+    margin: 25px auto 25px auto;
+    background: rgb(22, 77, 8);
+    border: sienna solid 30px;
+    border-radius: 100px;
+    /* height: 85%; */
+    text-align: center;
+    width: auto;
+  }
+
+  /* .table { */
+  /* width: 90%; */
+  /* max-width: calc(100% - 20px); */
+  /* border: 8px solid rgb(10, 43, 2);
     border-radius: 20px;
     background: rgb(22, 77, 8);
     margin: 80px auto 0px auto;
     color: white;
-    padding: 30px;
-  } */
+    padding: 30px; */
+  /* } */
+
   .player {
     margin: 29px;
     height: 90%;
@@ -70,6 +99,29 @@
     margin: 0 0 20px 0;
   }
 
+  .title {
+    justify-content: center;
+  }
+
+  .blackjack-title {
+    color: mintcream;
+    margin: 30px 0 0 0;
+  }
+}
+
+/* Mobile Devices */
+@media only screen and (min-width: 57px) and (max-width: 670px) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+    background: url(wood_pattern.png);
+  }
+
+  body * {
+    box-sizing: inherit;
+  }
+
   button {
     margin: 10px;
     font-size: 18px;
@@ -86,171 +138,15 @@
     box-shadow: 0px 0px 10px 5px rgba(35, 133, 199, 0.55);
   }
 
-  button[disabled] {
-    color: rgb(160, 160, 160);
-    background: rgb(71, 71, 71);
-  }
-
-  button[disabled]:hover {
-    cursor: not-allowed;
-    background: rgb(71, 71, 71);
-    box-shadow: none;
-  }
-
-  button[type="reset"] {
-    color: rgb(255, 184, 184);
-    background: rgb(133, 8, 8);
-  }
-
-  button[type="reset"]:hover {
-    background: rgb(150, 7, 7);
-    box-shadow: 0px 0px 10px 5px rgba(150, 7, 7, 0.63);
-  }
-  .title {
-    /* display: flex; */
-    justify-content: center;
-  }
-  .blackjack-title {
-    color: mintcream;
-    margin: 30px 0 0 0;
-  }
   .table {
-    margin: 25px auto 0px auto;
+    border-radius: 45px;
     background: rgb(22, 77, 8);
-    border: sienna solid 30px;
-    border-radius: 100px;
-    height: 85%;
+    color: white;
+    margin: 0px auto 0px auto;
+    background: rgb(22, 77, 8);
+    border: sienna solid 15px;
     text-align: center;
     width: auto;
-    box-shadow: 5px 5px 5px black, inset 0 0 10px black;
-    -moz-box-shadow: 5px 5px 5px black, inset 0 0 10px black;
-    -webkit-box-shadow: 5px 5px 5px black, inset 0 0 10px black;
-  }
-
-  #logo {
-    font-family: "Cinzel", serif;
-    -webkit-transform: rotate(90deg);
-    opacity: 0.5;
-    color: white;
-    font-size: 2em;
-    float: left;
-    margin-top: -385px;
-    margin-left: -100px;
-    text-shadow: 0.25px 0.25px 0.25px black;
-  }
-
-  #logo2 {
-    font-family: "Cinzel", serif;
-    -webkit-transform: rotate(270deg);
-    opacity: 0.5;
-    color: white;
-    font-size: 2em;
-    float: right;
-    margin-top: -385px;
-    margin-right: -100px;
-    text-shadow: 0.25px 0.25px 0.25px black;
-  }
-
-  #padding {
-    width: 600px;
-    height: 50px;
-    text-align: center;
-    margin: auto;
-    font-family: "Trebuchet MS";
-    text-shadow: 1px 1px 1px black;
-  }
-
-  #padding2 {
-    width: 600px;
-    height: 15px;
-    text-align: center;
-    margin: auto;
-    font-family: "Trebuchet MS";
-    text-shadow: 1px 1px 1px black;
-  }
-
-  #buttonPadding {
-    width: 600px;
-    height: 30px;
-    text-align: center;
-    margin: auto;
-  }
-
-  #dealerHand {
-    width: 99%;
-    height: 150px;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 5px;
-  }
-
-  label {
-    opacity: 0.9;
-    color: white;
-    font-size: 2.1em;
-    text-align: center;
-    margin: auto;
-    width: auto;
-  }
-
-  a {
-    text-decoration: none;
-    opacity: 0.5;
-    color: white;
-  }
-
-  #messages {
-    font-size: 2em;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    font-family: "Trebuchet MS";
-  }
-
-  #money {
-    font-family: "Trebuchet MS";
-    width: 150px;
-    color: white;
-    margin: auto;
-    border: 1px solid white;
-    text-shadow: 0.5px 0.5px 0.5px black;
-  }
-}
-
-/* Mobile Devices */
-@media only screen and (min-width: 57px) and (max-width: 480px) {
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    box-sizing: border-box;
-    background: url(wood_pattern.png);
-  }
-
-  body * {
-    box-sizing: inherit;
-  }
-
-  .message-box {
-    width: 900px;
-    max-width: calc(100% - 20px);
-    margin: 0 auto 10px;
-    height: 1em;
-    font-size: 18px;
-    color: rgb(22, 77, 8);
-  }
-
-  .message-box.error {
-    color: rgb(122, 0, 0);
-  }
-
-  .table {
-    width: 100%;
-    border: 8px solid rgb(10, 43, 2);
-    border-radius: 20px;
-    background: rgb(22, 77, 8);
-    margin: 0 auto;
-    color: white;
-    height: 85%;
   }
 
   .player {
@@ -293,49 +189,13 @@
     margin: 10px;
     justify-content: center;
   }
-
-  button {
-    margin: 10px;
-    font-size: 18px;
-    border: 0;
-    padding: 10px 16px;
-    border-radius: 10px;
-    color: rgb(189, 229, 255);
-    background: rgb(0, 98, 163);
+  .title {
+    justify-content: center;
   }
 
-  button:hover {
-    cursor: pointer;
-    background: rgb(35, 133, 199);
-    box-shadow: 0px 0px 10px 5px rgba(35, 133, 199, 0.55);
-  }
-
-  button[disabled] {
-    color: rgb(160, 160, 160);
-    background: rgb(71, 71, 71);
-  }
-
-  button[disabled]:hover {
-    cursor: not-allowed;
-    background: rgb(71, 71, 71);
-    box-shadow: none;
-  }
-
-  button[type="reset"] {
-    color: rgb(255, 184, 184);
-    background: rgb(133, 8, 8);
-  }
-
-  button[type="reset"]:hover {
-    background: rgb(150, 7, 7);
-    box-shadow: 0px 0px 10px 5px rgba(150, 7, 7, 0.63);
-  }
-  #dealerHand {
-    width: 99%;
-    height: 80px;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 5px;
+  .blackjack-title {
+    color: mintcream;
+    margin: 30px 0 0 0;
+    font-size: x-large;
   }
 }
