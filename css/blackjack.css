@@ -155,8 +155,8 @@
   }
 
   .hand {
-    display: flex;
-    justify-content: center;
+    display: inline-flexbox;
+    /* justify-content: center; */
     background: rgba(10, 43, 2, 0.5);
     width: 99%;
     height: 80px;
@@ -168,6 +168,7 @@
 
   .hand img {
     height: 99%;
+    width: auto;
     padding: 10px 0 10px 10px;
   }
 
