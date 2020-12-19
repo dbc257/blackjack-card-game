@@ -28,7 +28,7 @@ Feel free to fork the project and change it to your likings. Try it out by cloni
 
 ## Prerequisites
 
-You with preferably need the latest version of Chrome, and a text editor.
+You will preferably need the latest version of Chrome, and a text editor.
 
 #### Go here for Chrome: https://www.google.com/chrome/
 
