@@ -49,9 +49,13 @@
   }
 
   .hand {
-    height: 90%;
     background: rgba(10, 43, 2, 0.5);
-    border-radius: 5px;
+    width: 99%;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 5px;
   }
 
   .hand img {
@@ -63,6 +67,7 @@
   .buttons {
     display: flex;
     justify-content: center;
+    margin: 0 0 20px 0;
   }
 
   button {
@@ -101,40 +106,22 @@
     background: rgb(150, 7, 7);
     box-shadow: 0px 0px 10px 5px rgba(150, 7, 7, 0.63);
   }
+  .title {
+    /* display: flex; */
+    justify-content: center;
+  }
+  .blackjack-title {
+    color: mintcream;
+    margin: 30px 0 0 0;
+  }
   .table {
-    /* width: 90%;
-    max-width: calc(100% - 20px);
-    border: 8px solid rgb(10, 43, 2);
-    border-radius: 20px;
-    background: rgb(22, 77, 8);
-    color: white;
-    padding: 30px; */
     margin: 25px auto 0px auto;
-    background: rgb(22, 77, 8); /* Old browsers */
-    /* background: -moz-radial-gradient(
-      center,
-      ellipse cover,
-      rgb(22, 77, 8, 1) 90%
-    );  */
-    /* FF3.6-15 */
-    /* background: -webkit-radial-gradient(
-      center,
-      ellipse cover,
-      rgb(22, 77, 8, 1) 90%
-    );  */
-    /* Chrome10-25,Safari5.1-6 */
-    /* background: radial-gradient(
-      ellipse at center,
-      rgb(22, 77, 8, 1) 90%
-    );  */
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: rgb(22, 77, 8);
     border: sienna solid 30px;
     border-radius: 100px;
     height: 85%;
     text-align: center;
     width: auto;
-    /* margin: auto; */
     box-shadow: 5px 5px 5px black, inset 0 0 10px black;
     -moz-box-shadow: 5px 5px 5px black, inset 0 0 10px black;
     -webkit-box-shadow: 5px 5px 5px black, inset 0 0 10px black;
@@ -198,15 +185,6 @@
     margin-bottom: 5px;
   }
 
-  #playerHand {
-    width: 99%;
-    height: 150px;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 5px;
-  }
-
   label {
     opacity: 0.9;
     color: white;
@@ -215,17 +193,6 @@
     margin: auto;
     width: auto;
   }
-
-  /* img {
-    float: left;
-    background: white;
-    border-radius: 5px;
-    border: 1px solid black;
-    width: 100px;
-    height: 125px;
-    margin: 10px 5px 10px 5px;
-    box-shadow: 2.5px 2.5px 2px black;
-  } */
 
   a {
     text-decoration: none;
@@ -278,18 +245,20 @@
 
   .table {
     width: 100%;
-    /* max-width: calc(100% - 20px); */
     border: 8px solid rgb(10, 43, 2);
     border-radius: 20px;
     background: rgb(22, 77, 8);
     margin: 0 auto;
     color: white;
-    /* padding: 30px; */
     height: 85%;
   }
+
   .player {
     margin: 20px;
     height: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .player-name {
@@ -302,9 +271,15 @@
   }
 
   .hand {
-    height: 90%;
+    display: flex;
+    justify-content: center;
     background: rgba(10, 43, 2, 0.5);
-    border-radius: 5px;
+    width: 99%;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 5px;
   }
 
   .hand img {
@@ -316,14 +291,11 @@
   .buttons {
     display: flex;
     margin: 10px;
-    /* flex-direction: column; */
     justify-content: center;
-    /* width: max-content */
   }
 
   button {
     margin: 10px;
-    /* margin-top: 10px; */
     font-size: 18px;
     border: 0;
     padding: 10px 16px;
@@ -359,16 +331,6 @@
     box-shadow: 0px 0px 10px 5px rgba(150, 7, 7, 0.63);
   }
   #dealerHand {
-    width: 99%;
-    height: 80px;
-    /* height: 90%; */
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 5px;
-  }
-
-  #playerHand {
     width: 99%;
     height: 80px;
     border: 2px solid white;

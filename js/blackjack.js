@@ -10,7 +10,8 @@ window.addEventListener("DOMContentLoaded", function () {
   const suits = ["spades", "diamonds", "clubs", "hearts"];
   const values = ["ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "queen", "king"];
   let dealerTurn = false;
-  let dealerBust = false;
+  const dealerBust = false;
+
   function BuildDeck() {
     for (var i = 0; i < suits.length; i++) {
       for (var x = 0; x < values.length; x++) {
@@ -20,6 +21,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     return deck;
   }
+
   function PointCalc() {
     playerPoints -= playerPoints;
     for (let index = 0; index < playerHand.length; index++) {
@@ -41,14 +43,9 @@ window.addEventListener("DOMContentLoaded", function () {
       playerPoints += 10;
     }
     document.getElementById("player-points").textContent = `${playerPoints}`;
-    // if (playerPoints > 21) {
-    //   setTimeout(function () {
-    //     alert("You bust by going over 21 points! The Dealer wins!");
-    //     location.reload();
-    //   }, 500);
-    // }
     return playerPoints;
   }
+
   function DealerCalc() {
     dealerPoints -= dealerPoints;
     for (let index = 0; index < dealerHand.length; index++) {
@@ -69,19 +66,11 @@ window.addEventListener("DOMContentLoaded", function () {
     if (dealerPoints < 12 && dealerAces > 0) {
       dealerPoints += 10;
     }
-    
     if (dealerTurn === true) {
       document.getElementById("dealer-points").textContent = `${dealerPoints}`;
     } else {
       document.getElementById("dealer-points").textContent = `?`;
     }
-    // if (dealerPoints > 21) {
-    //   setTimeout(function () {
-    //     dealerBust = true;
-    //     alert("The Dealer bust by going over 21 points! You win!");
-    //     location.reload();
-    //   }, 500);
-    // }
     return dealerPoints;
   }
 
@@ -103,7 +92,6 @@ window.addEventListener("DOMContentLoaded", function () {
     let hiddenCard = document.createElement("img");
     hiddenCard.setAttribute("src", `images/back_of_card.png`);
     hiddenCard.setAttribute("id", "hidden");
-    // console.log(dealerHand);
     document.getElementById("dealerHand").appendChild(hiddenCard);
   }
 
@@ -119,16 +107,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   function DealDealerHiddenCard() {
-    // let max = deck.length;
-    // let randomDealerCard = deck.splice(Math.floor(Math.random() * max), 1)[0];
-    // dealerHand.push(randomDealerCard)
-    // deck.unshift(randomDealerCard);
-    // let dealerCard = document.createElement("img");
-    // hiddenCard.setAttribute("id", "hidden");
     document.getElementById("hidden").setAttribute("src", `images/${dealerHand[1].value}_of_${dealerHand[1].suit}.png`);
-    // dealerCard.setAttribute("src", `images/${randomDealerCard.value}_of_${randomDealerCard.suit}.png`);
-    // document.getElementById("dealerHand").appendChild(dealerCard);
-    // return dealerHand;
   }
 
   function DealAgain() {
@@ -137,6 +116,8 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   BuildDeck();
+
+  // Deal Button
   document.getElementById("dealButton").addEventListener("click", function () {
     if (how_many_cards === 1) {
       if (confirm("Start a new game?")) {
@@ -159,18 +140,19 @@ window.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       DealPlayerCard();
     }, 1500);
+
     setTimeout(function () {
       PointCalc();
     }, 1501);
+
     setTimeout(function () {
       DealerCalc();
     }, 1501);
+
     setTimeout(function () {
       if (
         dealerPoints === 21 && 
         playerPoints < 21 
-        // &&
-        // playerPoints !== 21
         ) {
         document
           .getElementById("hidden")
@@ -188,8 +170,6 @@ window.addEventListener("DOMContentLoaded", function () {
       }
       if (
         playerPoints === 21 && 
-        // dealerPoints < 21 
-        // &&
         dealerPoints !== 21
         ) {
         document
@@ -224,6 +204,8 @@ window.addEventListener("DOMContentLoaded", function () {
     }, 1502);
     how_many_cards++;
   });
+
+  // Hit Button
   document.getElementById("hitButton").addEventListener("click", function () {
     if (playerHand.length === 0) {
       return;
@@ -232,8 +214,6 @@ window.addEventListener("DOMContentLoaded", function () {
     PointCalc();
     if (
       playerPoints === 21 && 
-      // dealerPoints < 21 
-      // &&
       dealerPoints !== 21
       ) {
       document
@@ -252,10 +232,7 @@ window.addEventListener("DOMContentLoaded", function () {
     if (
       playerPoints > 21 &&
       dealerPoints < 21 
-      // &&
-      // dealerPoints > playerPoints
     ) {
-      // console.log(`Player has ${playerPoints}, dealer has ${dealerPoints}`);
       setTimeout(function () {
         alert("The Dealer wins! You bust by going over 21 points!");
         setTimeout(function () {
@@ -264,35 +241,15 @@ window.addEventListener("DOMContentLoaded", function () {
       }, 1008);
     } 
   });
+
+  // Stand Button  
   document.getElementById("standButton").addEventListener("click", function () {
-      // document
-      //   .getElementById("hidden")
-      //   .setAttribute(
-      //     "src",
-      //     `images/${dealerHand[1].value}_of_${dealerHand[1].suit}.png`
-      //   );
       dealerTurn = true;
       DealDealerHiddenCard()
       DealerCalc();
-      // setTimeout(function (){
-      while (dealerPoints < 18 && dealerPoints < playerPoints || dealerPoints < 18 && dealerPoints === playerPoints) {
-        // if (dealerPoints < 18) {
-          // if (dealerPoints < 18 && dealerPoints < playerPoints) {
-          //   setTimeout(function () {
-          //     DealAgain()
-          //   }, 750);  
-          // }
-        //   setTimeout(function () {
-        //     DealAgain()
-        //   }, 750);
-        // }
-        // setTimeout(DealAgain(), 1000);
+      while (dealerPoints < 17) {
       DealAgain();
     }
-    // , 1000}); 
-    // else if (dealerPoints < 18 && dealerPoints < playerPoints) {
-    //   DealAgain();
-    // } else 
     if (
         dealerPoints === 21 && 
         playerPoints < 21 && 
@@ -309,10 +266,7 @@ window.addEventListener("DOMContentLoaded", function () {
       if (
         playerPoints > 21 &&
         dealerPoints < 21 
-        // &&
-        // dealerPoints > playerPoints
       ) {
-        // console.log(`Player has ${playerPoints}, dealer has ${dealerPoints}`);
         setTimeout(function () {
           alert("The Dealer wins! You bust by going over 21 points!");
           setTimeout(function () {
@@ -321,12 +275,10 @@ window.addEventListener("DOMContentLoaded", function () {
         }, 1008);
       } 
       if (
-        // playerPoints > 21 &&
         dealerPoints < 21 &&
         playerPoints < 21 &&
         dealerPoints > playerPoints
       ) {
-        // console.log(`Player has ${playerPoints}, dealer has ${dealerPoints}`);
         setTimeout(function () {
           alert("The Dealer wins! The Dealer has more points than you without going over 21 points!");
           setTimeout(function () {
@@ -348,10 +300,7 @@ window.addEventListener("DOMContentLoaded", function () {
       if (
         playerPoints === 21 &&
         dealerPoints !== 21 
-        // &&
-        // playerPoints > dealerPoints
       ) {
-        // console.log(`Player has ${playerPoints}, dealer has ${dealerPoints}`);
         setTimeout(function () {
           alert("You win! You have Blackjack!");
                   setTimeout(function () {
@@ -362,10 +311,7 @@ window.addEventListener("DOMContentLoaded", function () {
       if (
         playerPoints < 21 &&
         dealerPoints > 21 
-        // &&
-        // playerPoints > dealerPoints
       ) {
-        // console.log(`Player has ${playerPoints}, dealer has ${dealerPoints}`);
         setTimeout(function () {
           alert("You win! The Dealer bust by going over 21 points!");
                   setTimeout(function () {
@@ -378,7 +324,6 @@ window.addEventListener("DOMContentLoaded", function () {
         dealerPoints < 21 &&
         playerPoints > dealerPoints
       ) {
-        // console.log(`Player has ${playerPoints}, dealer has ${dealerPoints}`);
         setTimeout(function () {
           alert("You win! You have more points than the Dealer without going over 21 points!");
                   setTimeout(function () {
